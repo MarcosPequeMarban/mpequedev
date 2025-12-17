@@ -1,16 +1,71 @@
+/* NAVBAR BASE */
 .navbar {
-  height: 64px;
+  height: 72px;
+  padding: 0 48px;
+
   display: flex;
   align-items: center;
-  padding: 0 24px;
+
+  background: linear-gradient(
+    90deg,
+    #0f766e,
+    #0284c7
+  );
 }
 
-.logo {
-  font-size: 1.4rem;
-  font-weight: 700;
-  letter-spacing: 0.5px;
+/* LOGO */
+.navbar-left {
+  flex-shrink: 0;
 }
 
-.dev {
-  color: #4f46e5; // morado moderno (puede cambiarse)
+.logo-img {
+  height: 128px;
+}
+
+/* CONTENEDOR CENTRAL */
+.navbar-center {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+/* GRUPO DE BOTONES */
+.nav-group {
+  list-style: none;
+  display: flex;
+  align-items: center;
+
+  gap: 300px;                 // 🔥 más espacio entre bolas
+  padding: 10px 20px;        // 🔥 aire alrededor del grupo
+
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 999px;
+
+  margin: 0;
+}
+
+/* BOTONES */
+.nav-group li a {
+  display: block;
+  padding: 10px 22px;        // 🔥 bolas más grandes
+  border-radius: 999px;
+
+  font-size: 0.95rem;
+  font-weight: 500;
+  text-decoration: none;
+
+  color: #ecfeff;
+  background: rgba(255, 255, 255, 0.18);
+
+  transition:
+    background 0.25s ease,
+    transform 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+/* HOVER */
+.nav-group li a:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
