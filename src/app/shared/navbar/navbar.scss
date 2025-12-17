@@ -140,6 +140,15 @@ body {
     0 8px 20px rgba(0, 0, 0, 0.35);
 }
 
+.nav-group li a.active {
+  background: rgba(255, 255, 255, 0.4);
+  color: #0f172a;
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.6),
+    0 6px 16px rgba(0, 0, 0, 0.3);
+}
+
 /* =================================================
    RESPONSIVE – TABLET & MOBILE
    ================================================= */
@@ -208,6 +217,15 @@ body {
         #f8fafc,
         #e2e8f0);
   }
+
+  .nav-group li a.active {
+    background: rgba(255, 255, 255, 0.4);
+    color: #0f172a;
+
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.6),
+      0 6px 16px rgba(0, 0, 0, 0.3);
+  }
 }
 
 /* =================================================
@@ -225,5 +243,14 @@ body {
 
   .nav-group {
     min-width: 180px;
+  }
+
+  .nav-group li a.active {
+    background: rgba(255, 255, 255, 0.4);
+    color: #0f172a;
+
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.6),
+      0 6px 16px rgba(0, 0, 0, 0.3);
   }
 }
