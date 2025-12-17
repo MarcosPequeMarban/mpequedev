@@ -1,71 +1,229 @@
-/* NAVBAR BASE */
+/* =================================================
+   RESET BÁSICO (EVITA BORDES RAROS)
+   ================================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+/* =================================================
+   NAVBAR BASE – PREMIUM
+   ================================================= */
+
 .navbar {
-  height: 72px;
-  padding: 0 48px;
+  height: 76px;
+  padding: 0 56px;
 
   display: flex;
   align-items: center;
+  justify-content: space-between;
 
-  background: linear-gradient(
-    90deg,
-    #0f766e,
-    #0284c7
-  );
+  background: linear-gradient(90deg,
+      #0b8f87,
+      #0a6fb5);
+
+  box-shadow:
+    0 6px 20px rgba(0, 0, 0, 0.18),
+    inset 0 1px 0 rgba(255, 255, 255, 0.15);
+
+  position: relative;
+  z-index: 100;
 }
 
-/* LOGO */
+/* =================================================
+   BRAND
+   ================================================= */
+
 .navbar-left {
   flex-shrink: 0;
 }
 
-.logo-img {
-  height: 128px;
+.brand {
+  font-size: 2.4rem;
+  font-weight: 900;
+  letter-spacing: 0.6px;
+  display: flex;
+  align-items: center;
 }
 
-/* CONTENEDOR CENTRAL */
+.brand-mpm {
+  color: #111827;
+  text-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.05),
+    0 2px 4px rgba(0, 0, 0, 0.35),
+    0 6px 12px rgba(0, 0, 0, 0.25);
+}
+
+.brand-dev {
+  margin-left: 2px;
+  color: #22c55e;
+  text-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.15),
+    0 2px 6px rgba(0, 0, 0, 0.35),
+    0 6px 14px rgba(0, 0, 0, 0.3);
+}
+
+/* =================================================
+   HAMBURGER
+   ================================================= */
+
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  color: #f0fdfa;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* =================================================
+   NAV DESKTOP
+   ================================================= */
+
 .navbar-center {
   flex: 1;
   display: flex;
   justify-content: center;
 }
 
-/* GRUPO DE BOTONES */
 .nav-group {
   list-style: none;
   display: flex;
   align-items: center;
 
-  gap: 300px;                 // 🔥 más espacio entre bolas
-  padding: 10px 20px;        // 🔥 aire alrededor del grupo
+  gap: 18px;
+  padding: 14px 26px;
 
-  background: rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.14);
+  backdrop-filter: blur(8px);
   border-radius: 999px;
+
+  box-shadow:
+    inset 0 1px 1px rgba(255, 255, 255, 0.35),
+    0 4px 14px rgba(0, 0, 0, 0.25);
 
   margin: 0;
 }
 
-/* BOTONES */
 .nav-group li a {
   display: block;
-  padding: 10px 22px;        // 🔥 bolas más grandes
+  padding: 12px 26px;
   border-radius: 999px;
 
-  font-size: 0.95rem;
+  font-size: 1rem;
   font-weight: 500;
   text-decoration: none;
 
-  color: #ecfeff;
-  background: rgba(255, 255, 255, 0.18);
+  color: #f0fdfa;
+  background: linear-gradient(180deg,
+      rgba(255, 255, 255, 0.28),
+      rgba(255, 255, 255, 0.12));
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.45),
+    0 3px 8px rgba(0, 0, 0, 0.25);
 
   transition:
-    background 0.25s ease,
     transform 0.15s ease,
-    box-shadow 0.15s ease;
+    box-shadow 0.15s ease,
+    background 0.25s ease;
 }
 
-/* HOVER */
 .nav-group li a:hover {
-  background: rgba(255, 255, 255, 0.3);
-  transform: translateY(-1px);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.55),
+    0 8px 20px rgba(0, 0, 0, 0.35);
+}
+
+/* =================================================
+   RESPONSIVE – TABLET & MOBILE
+   ================================================= */
+
+@media (max-width: 1024px) {
+
+  /* Mostrar hamburguesa */
+  .menu-toggle {
+    display: block;
+  }
+
+  /* Menú desplegable */
+  .navbar-center {
+    position: absolute;
+    top: 76px;
+    right: 16px;
+    /* 🔥 alineado a la derecha */
+    left: auto;
+
+    display: none;
+    justify-content: flex-start;
+
+    background: none;
+    padding: 0;
+  }
+
+  .navbar-center.open {
+    display: flex;
+  }
+
+  .nav-group {
+    flex-direction: column;
+    align-items: stretch;
+
+    gap: 10px;
+    padding: 14px;
+    min-width: 200px;
+
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(10px);
+    border-radius: 18px;
+
+    box-shadow:
+      0 14px 32px rgba(0, 0, 0, 0.35);
+  }
+
+  .nav-group li a {
+    width: 100%;
+    text-align: center;
+
+    padding: 8px 18px;
+    font-size: 0.9rem;
+
+    color: #0f172a;
+    background: linear-gradient(180deg,
+        rgba(255, 255, 255, 0.28),
+        rgba(255, 255, 255, 0.12));
+
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.8),
+      0 4px 12px rgba(0, 0, 0, 0.18);
+  }
+
+  .nav-group li a:hover {
+    background: linear-gradient(180deg,
+        #f8fafc,
+        #e2e8f0);
+  }
+}
+
+/* =================================================
+   MÓVILES MUY PEQUEÑOS (360px)
+   ================================================= */
+
+@media (max-width: 420px) {
+  .navbar {
+    padding: 0 20px;
+  }
+
+  .brand {
+    font-size: 2rem;
+  }
+
+  .nav-group {
+    min-width: 180px;
+  }
 }

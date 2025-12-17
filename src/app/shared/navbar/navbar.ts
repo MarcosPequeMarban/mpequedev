@@ -7,4 +7,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   changeDetection: ChangeDetectionStrategy.OnPush,
   styleUrl: './navbar.scss'
 })
-export class Navbar { }
+export class Navbar {
+menuOpen = false;
+
+}

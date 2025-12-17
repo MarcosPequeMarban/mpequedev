@@ -2,14 +2,12 @@
    RESET & BASE GLOBAL
    ========================================================= */
 
-/* Box sizing consistente */
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
 
-/* Eliminar márgenes por defecto del navegador */
 html,
 body {
   margin: 0;
@@ -18,7 +16,6 @@ body {
   height: 100%;
 }
 
-/* Fuente base del proyecto */
 body {
   font-family: "Inter", -apple-system, BlinkMacSystemFont,
     "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
@@ -33,7 +30,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Angular root */
 app-root {
   display: block;
   width: 100%;
@@ -55,7 +51,6 @@ a {
   text-decoration: none;
 }
 
-/* Listas limpias por defecto */
 ul,
 ol {
   margin: 0;
@@ -63,7 +58,6 @@ ol {
   list-style: none;
 }
 
-/* Botones base */
 button {
   font-family: inherit;
   font-size: inherit;
@@ -73,7 +67,7 @@ button {
 }
 
 /* =========================================================
-   UTILIDADES GLOBALES (te servirán más adelante)
+   UTILIDADES GLOBALES
    ========================================================= */
 
 .container {
@@ -94,22 +88,185 @@ button {
 }
 
 /* =========================================================
-   SCROLLBAR (opcional pero queda pro)
+   NAVBAR BASE – PREMIUM
    ========================================================= */
 
-::-webkit-scrollbar {
-  width: 10px;
+.navbar {
+  height: 76px;
+  padding: 0 56px;
+
+  display: flex;
+  align-items: center;
+
+  background: linear-gradient(
+    90deg,
+    #0b8f87,
+    #0a6fb5
+  );
+
+  box-shadow:
+    0 6px 20px rgba(0, 0, 0, 0.18),
+    inset 0 1px 0 rgba(255, 255, 255, 0.15);
+
+  position: relative;
+  z-index: 100;
 }
 
-::-webkit-scrollbar-track {
-  background: #f1f5f9;
+/* =========================================================
+   BRAND
+   ========================================================= */
+
+.navbar-left {
+  flex-shrink: 0;
 }
 
-::-webkit-scrollbar-thumb {
-  background: #94a3b8;
-  border-radius: 8px;
+.brand {
+  font-size: 2.4rem;
+  font-weight: 900;
+  letter-spacing: 0.6px;
+  display: flex;
+  align-items: center;
 }
 
-::-webkit-scrollbar-thumb:hover {
-  background: #64748b;
+.brand-mpm {
+  color: #111827;
+  text-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.05),
+    0 2px 4px rgba(0, 0, 0, 0.35),
+    0 6px 12px rgba(0, 0, 0, 0.25);
+}
+
+.brand-dev {
+  margin-left: 2px;
+  color: #22c55e;
+  text-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.15),
+    0 2px 6px rgba(0, 0, 0, 0.35),
+    0 6px 14px rgba(0, 0, 0, 0.3);
+}
+
+/* =========================================================
+   ZONA DERECHA (HAMBURGER)
+   ========================================================= */
+
+.menu-toggle {
+  display: none;
+  margin-left: auto; /* 🔥 CLAVE: empuja a la derecha */
+  font-size: 30px;
+  color: #f0fdfa;
+}
+
+/* =========================================================
+   NAV DESKTOP
+   ========================================================= */
+
+.navbar-center {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.nav-group {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+
+  padding: 14px 26px;
+  background: rgba(255, 255, 255, 0.14);
+  backdrop-filter: blur(8px);
+  border-radius: 999px;
+
+  box-shadow:
+    inset 0 1px 1px rgba(255, 255, 255, 0.35),
+    0 4px 14px rgba(0, 0, 0, 0.25);
+}
+
+.nav-group li a {
+  display: block;
+  padding: 12px 26px;
+  border-radius: 999px;
+
+  font-size: 1rem;
+  font-weight: 500;
+
+  color: #f0fdfa;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.28),
+    rgba(255, 255, 255, 0.12)
+  );
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.45),
+    0 3px 8px rgba(0, 0, 0, 0.25);
+
+  transition: all 0.2s ease;
+}
+
+.nav-group li a:hover {
+  transform: translateY(-2px);
+}
+
+/* =========================================================
+   RESPONSIVE – TABLET & MOBILE
+   ========================================================= */
+
+@media (max-width: 1024px) {
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .navbar-center {
+    position: absolute;
+    top: 76px;
+    right: 16px; /* 🔥 sale desde la derecha */
+    left: auto;
+
+    display: none;
+    justify-content: flex-end;
+  }
+
+  .navbar-center.open {
+    display: flex;
+  }
+
+  .nav-group {
+    flex-direction: column;
+    gap: 10px;
+
+    padding: 14px;
+    min-width: 200px;
+
+    background: rgba(255, 255, 255, 0.92);
+    border-radius: 18px;
+
+    box-shadow:
+      0 14px 32px rgba(0, 0, 0, 0.35);
+  }
+
+  .nav-group li a {
+    width: 100%;
+    padding: 8px 18px;
+    font-size: 0.9rem;
+    color: #0f172a;
+  }
+}
+
+/* =========================================================
+   MÓVILES PEQUEÑOS (360px)
+   ========================================================= */
+
+@media (max-width: 420px) {
+  .navbar {
+    padding: 0 20px;
+  }
+
+  .brand {
+    font-size: 2rem;
+  }
+
+  .nav-group {
+    min-width: 180px;
+  }
 }

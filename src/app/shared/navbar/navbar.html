@@ -1,18 +1,31 @@
 <nav class="navbar">
   <div class="navbar-left">
-    <img
-      src="/branding/logo-mpmdev.png"
-      alt="MPMDev"
-      class="logo-img"
-    />
+    <span class="brand">
+      MPM<span class="brand-dev">Dev</span>
+    </span>
   </div>
 
-  <div class="navbar-center">
+  <!-- BOTÓN HAMBURGER -->
+  <button class="menu-toggle" (click)="menuOpen = !menuOpen">
+    ☰
+  </button>
+
+  <div class="navbar-center" [class.open]="menuOpen">
     <ul class="nav-group">
-      <li><a routerLink="/">Inicio</a></li>
-      <li><a routerLink="/about">Sobre mí</a></li>
-      <li><a routerLink="/projects">Proyectos</a></li>
-      <li><a routerLink="/contact">Contacto</a></li>
+      <li><a routerLink="/" (click)="menuOpen = false">Inicio</a></li>
+      <li><a routerLink="/about" (click)="menuOpen = false">Sobre mí</a></li>
+      <li><a routerLink="/stack" (click)="menuOpen = false">Stack</a></li>
+      <li><a routerLink="/experience" (click)="menuOpen = false">Experiencia</a></li>
+      <li><a routerLink="/projects" (click)="menuOpen = false">Proyectos</a></li>
+      <li><a routerLink="/contact" (click)="menuOpen = false">Contacto</a></li>
     </ul>
+  </div>
+    <!-- DERECHA: Logo -->
+  <div class="navbar-right">
+    <img
+      src="/branding/logo-mpmdev.png"
+      alt="MPM logo"
+      class="logo-icon"
+    />
   </div>
 </nav>
