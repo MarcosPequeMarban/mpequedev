@@ -5,70 +5,43 @@
     </span>
   </div>
 
-  <!-- BOTÓN HAMBURGER -->
-  <button class="menu-toggle" (click)="menuOpen = !menuOpen">
-    ☰
-  </button>
+
 
   <div class="navbar-center" [class.open]="menuOpen">
     <ul class="nav-group">
       <li>
-        <a
-          routerLink="/"
-          routerLinkActive="active"
-          [routerLinkActiveOptions]="{ exact: true }"
-          (click)="menuOpen = false"
-        >
+        <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
+          (click)="menuOpen = false">
           Inicio
         </a>
       </li>
 
       <li>
-        <a
-          routerLink="/about"
-          routerLinkActive="active"
-          (click)="menuOpen = false"
-        >
+        <a routerLink="/about" routerLinkActive="active" (click)="menuOpen = false">
           Sobre mí
         </a>
       </li>
 
       <li>
-        <a
-          routerLink="/stack"
-          routerLinkActive="active"
-          (click)="menuOpen = false"
-        >
+        <a routerLink="/stack" routerLinkActive="active" (click)="menuOpen = false">
           Stack
         </a>
       </li>
 
       <li>
-        <a
-          routerLink="/experience"
-          routerLinkActive="active"
-          (click)="menuOpen = false"
-        >
+        <a routerLink="/experience" routerLinkActive="active" (click)="menuOpen = false">
           Experiencia
         </a>
       </li>
 
       <li>
-        <a
-          routerLink="/projects"
-          routerLinkActive="active"
-          (click)="menuOpen = false"
-        >
+        <a routerLink="/projects" routerLinkActive="active" (click)="menuOpen = false">
           Proyectos
         </a>
       </li>
 
       <li>
-        <a
-          routerLink="/contact"
-          routerLinkActive="active"
-          (click)="menuOpen = false"
-        >
+        <a routerLink="/contact" routerLinkActive="active" (click)="menuOpen = false">
           Contacto
         </a>
       </li>
@@ -77,10 +50,10 @@
 
   <!-- DERECHA: Logo -->
   <div class="navbar-right">
-    <img
-      src="/branding/logo-mpmdev.png"
-      alt="MPM logo"
-      class="logo-icon"
-    />
+    <!-- BOTÓN HAMBURGER -->
+    <button class="menu-toggle" (click)="menuOpen = !menuOpen">
+      ☰
+    </button>
+    <img src="/branding/logo-mpmdev.png" alt="MPM logo" class="logo-icon" />
   </div>
 </nav>

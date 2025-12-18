@@ -1,5 +1,5 @@
 /* =================================================
-   RESET BÁSICO (EVITA BORDES RAROS)
+   RESET BÁSICO
    ================================================= */
 
 * {
@@ -11,26 +11,30 @@ body {
 }
 
 /* =================================================
-   NAVBAR BASE – PREMIUM
+   NAVBAR BASE – DARK DEV
    ================================================= */
 
 .navbar {
   height: 76px;
-  padding: 0 56px;
+  padding: 0 48px;
 
   display: flex;
   align-items: center;
   justify-content: space-between;
 
-  background: linear-gradient(90deg,
-      #0b8f87,
-      #0a6fb5);
+  background: linear-gradient(
+    90deg,
+    #020617,
+    #0f172a
+  );
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
 
   box-shadow:
-    0 6px 20px rgba(0, 0, 0, 0.18),
-    inset 0 1px 0 rgba(255, 255, 255, 0.15);
+    0 10px 30px rgba(0, 0, 0, 0.6);
 
-  position: relative;
+  position: sticky;
+  top: 0;
   z-index: 100;
 }
 
@@ -43,28 +47,45 @@ body {
 }
 
 .brand {
-  font-size: 2.4rem;
+  font-size: 2.2rem;
   font-weight: 900;
-  letter-spacing: 0.6px;
+  letter-spacing: 0.4px;
   display: flex;
   align-items: center;
+   color: #ececec;
 }
 
 .brand-mpm {
-  color: #111827;
+  color: #ececec; /* gris claro, no blanco puro */
+
   text-shadow:
-    0 1px 0 rgba(255, 255, 255, 0.05),
-    0 2px 4px rgba(0, 0, 0, 0.35),
-    0 6px 12px rgba(0, 0, 0, 0.25);
+    0 1px 2px rgba(0, 0, 0, 0.6),
+    0 0 6px rgba(255, 255, 255, 0.04);
 }
 
 .brand-dev {
-  margin-left: 2px;
   color: #22c55e;
+
   text-shadow:
-    0 1px 0 rgba(255, 255, 255, 0.15),
-    0 2px 6px rgba(0, 0, 0, 0.35),
-    0 6px 14px rgba(0, 0, 0, 0.3);
+    0 0 6px rgba(34, 197, 94, 0.6),
+    0 0 12px rgba(34, 197, 94, 0.35);
+}
+
+/* =================================================
+   LOGO DERECHA
+   ================================================= */
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+
+.logo-icon {
+  width: 42px;
+  height: 42px;
+  opacity: 0.9;
 }
 
 /* =================================================
@@ -73,11 +94,42 @@ body {
 
 .menu-toggle {
   display: none;
-  font-size: 28px;
-  color: #f0fdfa;
+
+  width: 32px;
+  height: 32px;          /* 🔥 MISMA ALTURA QUE ICONOS */
+
+  padding: 0;
+  margin: 0;
+
   background: none;
   border: none;
   cursor: pointer;
+
+  display: none;
+  align-items: center;  /* 🔥 centra vertical */
+  justify-content: center;
+}
+
+.menu-toggle span {
+  position: absolute;
+
+  width: 22px;
+  height: 2px;
+
+  background: #e5e7eb;
+  border-radius: 2px;
+}
+
+.menu-toggle span:nth-child(1) {
+  transform: translateY(-6px);
+}
+
+.menu-toggle span:nth-child(2) {
+  transform: translateY(0);
+}
+
+.menu-toggle span:nth-child(3) {
+  transform: translateY(6px);
 }
 
 /* =================================================
@@ -94,59 +146,42 @@ body {
   list-style: none;
   display: flex;
   align-items: center;
+  gap: 22px;
 
-  gap: 18px;
-  padding: 14px 26px;
-
-  background: rgba(255, 255, 255, 0.14);
-  backdrop-filter: blur(8px);
+  padding: 8px 16px;
   border-radius: 999px;
 
-  box-shadow:
-    inset 0 1px 1px rgba(255, 255, 255, 0.35),
-    0 4px 14px rgba(0, 0, 0, 0.25);
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(6px);
 
   margin: 0;
 }
 
 .nav-group li a {
   display: block;
-  padding: 12px 26px;
-  border-radius: 999px;
+  padding: 6px 14px;
 
-  font-size: 1rem;
+  font-size: 0.95rem;
   font-weight: 500;
   text-decoration: none;
 
-  color: #f0fdfa;
-  background: linear-gradient(180deg,
-      rgba(255, 255, 255, 0.28),
-      rgba(255, 255, 255, 0.12));
+  color: #9ca3af;
+  background: none;
+  border-radius: 999px;
 
-  box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, 0.45),
-    0 3px 8px rgba(0, 0, 0, 0.25);
-
-  transition:
-    transform 0.15s ease,
-    box-shadow 0.15s ease,
-    background 0.25s ease;
+  transition: all 0.2s ease;
 }
 
 .nav-group li a:hover {
-  transform: translateY(-2px);
-  box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, 0.55),
-    0 8px 20px rgba(0, 0, 0, 0.35);
+  color: #e5e7eb;
+  background: rgba(255, 255, 255, 0.06);
 }
 
+/* ACTIVO */
 .nav-group li a.active {
-  background: rgba(255, 255, 255, 0.4);
-  color: #0f172a;
-
-  box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, 0.6),
-    0 6px 16px rgba(0, 0, 0, 0.3);
+  color: #22c55e;
+  background: rgba(34, 197, 94, 0.12);
 }
 
 /* =================================================
@@ -155,28 +190,22 @@ body {
 
 @media (max-width: 1024px) {
 
-  /* Mostrar hamburguesa */
   .menu-toggle {
-    display: block;
+    display: flex;
   }
 
-  /* Menú desplegable */
   .navbar-center {
     position: absolute;
     top: 76px;
-    right: 16px;
-    /* 🔥 alineado a la derecha */
+    right: 24px;
     left: auto;
 
     display: none;
-    justify-content: flex-start;
-
-    background: none;
-    padding: 0;
+    justify-content: flex-end;
   }
 
   .navbar-center.open {
-    display: flex;
+    display: block;
   }
 
   .nav-group {
@@ -185,51 +214,37 @@ body {
 
     gap: 10px;
     padding: 14px;
-    min-width: 200px;
+    min-width: 220px;
 
-    background: rgba(255, 255, 255, 0.92);
-    backdrop-filter: blur(10px);
-    border-radius: 18px;
+    background: #111827;
+    border-radius: 16px;
 
     box-shadow:
-      0 14px 32px rgba(0, 0, 0, 0.35);
+      0 20px 40px rgba(0, 0, 0, 0.7);
   }
 
   .nav-group li a {
     width: 100%;
     text-align: center;
 
-    padding: 8px 18px;
+    padding: 10px 16px;
     font-size: 0.9rem;
 
-    color: #0f172a;
-    background: linear-gradient(180deg,
-        rgba(255, 255, 255, 0.28),
-        rgba(255, 255, 255, 0.12));
-
-    box-shadow:
-      inset 0 1px 0 rgba(255, 255, 255, 0.8),
-      0 4px 12px rgba(0, 0, 0, 0.18);
+    color: #e5e7eb;
   }
 
   .nav-group li a:hover {
-    background: linear-gradient(180deg,
-        #f8fafc,
-        #e2e8f0);
+    background: rgba(255, 255, 255, 0.08);
   }
 
   .nav-group li a.active {
-    background: rgba(255, 255, 255, 0.4);
-    color: #0f172a;
-
-    box-shadow:
-      inset 0 1px 0 rgba(255, 255, 255, 0.6),
-      0 6px 16px rgba(0, 0, 0, 0.3);
+    color: #22c55e;
+    background: rgba(34, 197, 94, 0.14);
   }
 }
 
 /* =================================================
-   MÓVILES MUY PEQUEÑOS (360px)
+   MÓVILES MUY PEQUEÑOS
    ================================================= */
 
 @media (max-width: 420px) {
@@ -238,19 +253,10 @@ body {
   }
 
   .brand {
-    font-size: 2rem;
+    font-size: 1.9rem;
   }
 
   .nav-group {
     min-width: 180px;
-  }
-
-  .nav-group li a.active {
-    background: rgba(255, 255, 255, 0.4);
-    color: #0f172a;
-
-    box-shadow:
-      inset 0 1px 0 rgba(255, 255, 255, 0.6),
-      0 6px 16px rgba(0, 0, 0, 0.3);
   }
 }

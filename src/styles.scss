@@ -98,11 +98,9 @@ button {
   display: flex;
   align-items: center;
 
-  background: linear-gradient(
-    90deg,
-    #0b8f87,
-    #0a6fb5
-  );
+  background: linear-gradient(90deg,
+      #0b8f87,
+      #0a6fb5);
 
   box-shadow:
     0 6px 20px rgba(0, 0, 0, 0.18),
@@ -151,7 +149,8 @@ button {
 
 .menu-toggle {
   display: none;
-  margin-left: auto; /* 🔥 CLAVE: empuja a la derecha */
+  margin-left: auto;
+  /* 🔥 CLAVE: empuja a la derecha */
   font-size: 30px;
   color: #f0fdfa;
 }
@@ -190,11 +189,9 @@ button {
   font-weight: 500;
 
   color: #f0fdfa;
-  background: linear-gradient(
-    180deg,
-    rgba(255, 255, 255, 0.28),
-    rgba(255, 255, 255, 0.12)
-  );
+  background: linear-gradient(180deg,
+      rgba(255, 255, 255, 0.28),
+      rgba(255, 255, 255, 0.12));
 
   box-shadow:
     inset 0 1px 0 rgba(255, 255, 255, 0.45),
@@ -206,6 +203,66 @@ button {
 .nav-group li a:hover {
   transform: translateY(-2px);
 }
+
+:root {
+  /* Fondos */
+  --bg-main: #0b1220;
+  /* fondo general oscuro */
+  --bg-soft: #0f172a;
+  /* fondo suave */
+  --bg-card: #111827;
+  /* tarjetas */
+
+  /* Acentos */
+  --accent-green: #22c55e;
+  /* verde código */
+  --accent-teal: #0b8f87;
+  /* verde azulado */
+  --accent-blue: #0a6fb5;
+  /* azul */
+
+  /* Texto */
+  --text-main: #e5e7eb;
+  /* texto principal */
+  --text-muted: #9ca3af;
+  /* texto secundario */
+  --text-dark: #111827;
+
+  /* Bordes */
+  --border-soft: rgba(255, 255, 255, 0.08);
+}
+
+/* TÍTULOS */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+/* NAVBAR + BRAND */
+.navbar,
+.navbar a,
+.brand {
+  font-family: "Space Grotesk", sans-serif;
+}
+
+/* Marca con más presencia */
+.brand {
+  font-weight: 700;
+  letter-spacing: -0.03em;
+}
+
+/* Botones del nav */
+.nav-group li a {
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 500;
+}
+
 
 /* =========================================================
    RESPONSIVE – TABLET & MOBILE
@@ -220,7 +277,8 @@ button {
   .navbar-center {
     position: absolute;
     top: 76px;
-    right: 16px; /* 🔥 sale desde la derecha */
+    right: 16px;
+    /* 🔥 sale desde la derecha */
     left: auto;
 
     display: none;
