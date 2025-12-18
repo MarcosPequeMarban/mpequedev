@@ -1,3 +1,128 @@
-:host {
-  display: block;
+/* =================================================
+   ABOUT
+   ================================================= */
+
+.about {
+  padding: 96px 0;
+  background: #ffffff;
+}
+
+.about-layout {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 72px;
+  align-items: flex-start;
+}
+
+/* FOTO */
+
+.about-photo {
+  position: sticky;
+  top: 120px;
+}
+
+.about-photo img {
+  width: 100%;
+  max-width: 320px;
+  border-radius: 24px;
+
+  box-shadow:
+    0 24px 48px rgba(0, 0, 0, 0.18);
+}
+
+/* CONTENIDO */
+
+.about-content {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+/* CARD BASE */
+
+.about-card {
+  background: rgba(11, 143, 135, 0.06);
+  border-radius: 24px;
+
+  padding: 32px 36px;
+
+  box-shadow:
+    0 12px 28px rgba(0, 0, 0, 0.06);
+}
+
+/* INTRO CARD */
+
+.about-card.intro {
+  background: rgba(11, 143, 135, 0.08);
+}
+
+.about-card h2 {
+  font-size: 2.4rem;
+  margin-bottom: 16px;
+  color: #111827;
+}
+
+.about-lead {
+  font-size: 1.2rem;
+  line-height: 1.7;
+  color: #374151;
+}
+
+/* SECCIONES */
+
+.about-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 16px;
+  color: #0b8f87;
+}
+
+.about-card p {
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: #475569;
+  margin-bottom: 14px;
+}
+
+.about-card p strong {
+  color: #0a6fb5;
+  font-weight: 600;
+}
+
+/* =================================================
+   RESPONSIVE
+   ================================================= */
+
+@media (max-width: 1024px) {
+  .about-layout {
+    grid-template-columns: 1fr;
+    gap: 56px;
+  }
+
+  .about-photo {
+    position: relative;
+    top: auto;
+    text-align: center;
+  }
+
+  .about-photo img {
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .about {
+    padding: 64px 0;
+  }
+
+  .about-card {
+    padding: 24px;
+  }
+
+  .about-card h2 {
+    font-size: 2rem;
+  }
+
+  .about-card h3 {
+    font-size: 1.35rem;
+  }
 }
