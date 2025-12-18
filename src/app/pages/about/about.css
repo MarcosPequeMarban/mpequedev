@@ -1,36 +1,86 @@
 /* =================================================
-   ABOUT
+   ABOUT – HERO STYLE (MATCH HOME)
    ================================================= */
 
-.about {
-  padding: 96px 0;
-  background: #ffffff;
+.about-section {
+  position: relative;
+  min-height: calc(100vh - 76px);
+  padding: 120px 0;
+
+  background-image: url("/branding/gifFondo.gif");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  align-items: center;
 }
 
+/* Overlay oscuro para legibilidad */
+.about::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    180deg,
+    rgba(2, 6, 23, 0.88),
+    rgba(2, 6, 23, 0.95)
+  );
+
+  z-index: 1;
+}
+.about-header h1 {
+  color: #f9fafb;
+
+  text-shadow:
+    0 2px 6px rgba(0, 0, 0, 0.85),
+    0 0 14px rgba(255, 255, 255, 0.12);
+}
+.about-header p {
+  color: #ffffff;
+  font-weight: 500;
+
+  text-shadow:
+    0 2px 6px rgba(0, 0, 0, 0.9),
+    0 0 14px rgba(34, 197, 94, 0.6);
+}
+
+/* =================================================
+   LAYOUT
+   ================================================= */
+
 .about-layout {
+  position: relative;
+  z-index: 2;
+
   display: grid;
-  grid-template-columns: 0.9fr 1.1fr;
-  gap: 72px;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: 80px;
   align-items: flex-start;
 }
 
-/* FOTO */
+/* =================================================
+   FOTO
+   ================================================= */
 
 .about-photo {
-  position: sticky;
-  top: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
 }
 
 .about-photo img {
-  width: 100%;
-  max-width: 320px;
+  max-width: 300px;
   border-radius: 24px;
 
   box-shadow:
-    0 24px 48px rgba(0, 0, 0, 0.18);
+    0 30px 60px rgba(0, 0, 0, 0.7);
 }
 
-/* CONTENIDO */
+/* =================================================
+   CONTENIDO
+   ================================================= */
 
 .about-content {
   display: flex;
@@ -38,53 +88,60 @@
   gap: 32px;
 }
 
-/* CARD BASE */
+/* =================================================
+   CARD BASE (IGUAL QUE HERO CARD)
+   ================================================= */
 
 .about-card {
-  background: rgba(11, 143, 135, 0.06);
-  border-radius: 24px;
+  background: rgba(17, 24, 39, 0.9);
+  padding: 48px 44px;
+  border-radius: 28px;
 
-  padding: 32px 36px;
+  border: 1px solid rgba(255,255,255,0.08);
 
   box-shadow:
-    0 12px 28px rgba(0, 0, 0, 0.06);
+    0 40px 80px rgba(0,0,0,0.7),
+    inset 0 1px 0 rgba(255,255,255,0.04);
 }
 
-/* INTRO CARD */
-
+/* Intro más grande */
 .about-card.intro {
-  background: rgba(11, 143, 135, 0.08);
+  padding: 56px 52px;
 }
+
+/* =================================================
+   TEXTO
+   ================================================= */
 
 .about-card h2 {
-  font-size: 2.4rem;
-  margin-bottom: 16px;
-  color: #111827;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 2.6rem;
+  margin-bottom: 20px;
+  color: #f9fafb;
 }
 
 .about-lead {
-  font-size: 1.2rem;
+  font-size: 1.15rem;
   line-height: 1.7;
-  color: #374151;
+  color: #e5e7eb;
 }
 
-/* SECCIONES */
-
 .about-card h3 {
-  font-size: 1.5rem;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1.45rem;
   margin-bottom: 16px;
-  color: #0b8f87;
+  color: #22c55e;
 }
 
 .about-card p {
-  font-size: 1.05rem;
-  line-height: 1.75;
-  color: #475569;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #9ca3af;
   margin-bottom: 14px;
 }
 
 .about-card p strong {
-  color: #0a6fb5;
+  color: #c7d2fe;
   font-weight: 600;
 }
 
@@ -99,30 +156,32 @@
   }
 
   .about-photo {
-    position: relative;
-    top: auto;
-    text-align: center;
+    order: -1;
   }
 
   .about-photo img {
-    margin: 0 auto;
+    max-width: 240px;
   }
 }
 
 @media (max-width: 600px) {
   .about {
-    padding: 64px 0;
+    padding: 80px 0;
   }
 
   .about-card {
-    padding: 24px;
+    padding: 32px 24px;
+  }
+
+  .about-card.intro {
+    padding: 36px 28px;
   }
 
   .about-card h2 {
-    font-size: 2rem;
+    font-size: 2.2rem;
   }
 
   .about-card h3 {
-    font-size: 1.35rem;
+    font-size: 1.25rem;
   }
 }
