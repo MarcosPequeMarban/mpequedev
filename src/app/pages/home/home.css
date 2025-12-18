@@ -3,11 +3,7 @@
   display: flex;
   align-items: center;
 
-  background: linear-gradient(
-    180deg,
-    #f8fafc,
-    #ffffff
-  );
+  background: linear-gradient(180deg, #f8fafc, #ffffff);
 }
 
 .hero-content {
@@ -15,6 +11,18 @@
   grid-template-columns: 1.2fr 0.8fr;
   gap: 48px;
   align-items: center;
+  background: rgba(11, 143, 135, 0.06);
+  border-radius: 28px;
+
+  padding: 56px 64px;
+  margin-top: 32px;
+
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.06);
+}
+
+.hero-text {
+  position: relative;
+  z-index: 2;
 }
 
 .hero-text h1 {
@@ -27,6 +35,7 @@
   font-weight: 500;
   margin-bottom: 20px;
 }
+
 .hero-text h2 strong {
   color: #0a6fb5;
   font-weight: 600;
@@ -51,20 +60,108 @@
   margin-top: 32px;
   display: flex;
   gap: 16px;
+
+  position: relative;
+  z-index: 3;
 }
 
 .btn {
   padding: 12px 28px;
   border-radius: 999px;
   font-weight: 500;
+  cursor: pointer;
 }
 
 .btn.primary {
   background: #0b8f87;
   color: white;
 }
+.btn.primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(11, 143, 135, 0.35);
+}
 
 .btn.secondary {
   border: 1px solid #0b8f87;
   color: #0b8f87;
+}
+.btn.secondary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(11, 143, 135, 0.35);
+}
+
+.hero-image {
+  pointer-events: none;
+}
+.profile-summary {
+  padding: 72px 0;
+  background: #ffffff;
+}
+
+.summary-content {
+  max-width: 900px;
+}
+
+.profile-summary h3 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 32px;
+  color: #111827;
+}
+
+.summary-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  border-left: 4px solid rgba(11, 143, 135, 0.4);
+}
+
+.summary-list li {
+  background: #ffffff;
+  padding: 20px 24px;
+  border-radius: 16px;
+
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.summary-list li strong {
+  font-size: 1.05rem;
+  color: #0b8f87;
+}
+
+.summary-list li span {
+  font-size: 0.95rem;
+  color: #475569;
+}
+
+@media (max-width: 768px) {
+  .summary-list {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 1024px) {
+  .hero-content {
+    padding: 48px 48px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-content {
+    grid-template-columns: 1fr;
+    padding: 40px 24px;
+  }
+
+  .hero-image {
+    order: -1;
+    margin-bottom: 32px;
+    text-align: center;
+  }
+
+  .hero-actions {
+    justify-content: center;
+  }
 }
