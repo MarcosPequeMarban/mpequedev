@@ -1,10 +1,12 @@
+import { CommonModule } from '@angular/common';
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 @Component({
-  selector: 'app-experience',
-  imports: [],
-  template: `<p>experience works!</p>`,
-  styleUrl: './experience.css',
+   selector: 'experience',
+  standalone: true,
+  imports: [CommonModule],
+  templateUrl: './experience.html',
+  styleUrls: ['./experience.css'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class Experience { }

@@ -1,3 +1,162 @@
-:host {
-  display: block;
+/* =================================================
+   EXPERIENCE SECTION
+   ================================================= */
+
+.experience-section {
+  min-height: calc(100vh - 76px);
+  padding: 120px 0;
+
+  background-image: url("/branding/gifFondo.gif");
+  background-size: cover;
+  background-position: center;
+}
+
+/* =================================================
+   HEADER
+   ================================================= */
+
+.experience-header {
+  text-align: center;
+  margin-bottom: 64px;
+}
+
+.experience-header h1 {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 3rem;
+  color: #f9fafb;
+}
+
+.experience-header p {
+  color: #22c55e;
+  font-size: 1.1rem;
+}
+
+/* =================================================
+   MAIN CARD
+   ================================================= */
+
+.experience-card-main {
+  background: rgba(17, 24, 39, 0.9);
+  border-radius: 32px;
+  padding: 64px;
+}
+
+/* =================================================
+   BLOCKS
+   ================================================= */
+
+.experience-block {
+  margin-bottom: 72px;
+}
+
+.experience-block h2 {
+  color: #22c55e;
+  margin-bottom: 32px;
+}
+
+/* =================================================
+   EXPERIENCE CARD
+   ================================================= */
+
+.experience-card {
+  background: rgba(2, 6, 23, 0.85);
+  border-radius: 24px;
+  padding: 32px;
+  margin-bottom: 32px;
+}
+
+.experience-card.highlight {
+  border: 1px solid rgba(34, 197, 94, 0.4);
+}
+
+/* =================================================
+   CARD CONTENT LAYOUT
+   ================================================= */
+
+.experience-card-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+}
+
+.experience-text {
+  flex: 1;
+}
+
+/* =================================================
+   TEXT
+   ================================================= */
+
+.experience-card h3 {
+  color: #f9fafb;
+  margin-bottom: 8px;
+}
+
+.experience-meta {
+  color: #9ca3af;
+  font-size: 0.9rem;
+}
+
+.experience-card ul {
+  margin-top: 16px;
+  padding-left: 20px;
+}
+
+.experience-card li {
+  color: #e5e7eb;
+  margin-bottom: 8px;
+}
+
+.experience-card p {
+  color: #9ca3af;
+  font-size: 0.95rem;
+}
+
+.experience-card p strong {
+  color: #c7d2fe;
+}
+
+/* =================================================
+   LOGO RIGHT
+   ================================================= */
+
+.experience-logo {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 160px;
+}
+
+.experience-logo img {
+  max-width: 160px;
+  max-height: 90px;
+  object-fit: contain;
+
+  opacity: 0.95;
+  filter: drop-shadow(0 6px 14px rgba(0, 0, 0, 0.45));
+}
+
+/* =================================================
+   RESPONSIVE
+   ================================================= */
+
+@media (max-width: 768px) {
+  .experience-card-main {
+    padding: 40px 24px;
+  }
+
+  .experience-card-content {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .experience-logo {
+    align-self: flex-end;
+  }
+
+  .experience-logo img {
+    max-width: 100px;
+  }
 }
