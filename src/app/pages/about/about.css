@@ -142,23 +142,7 @@
   box-shadow: 0 30px 60px rgba(0, 0, 0, 0.7);
 }
 
-/* =================================================
-   FOOTER
-   ================================================= */
 
-.site-footer {
-  background: #020617;
-  padding: 32px 0;
-}
-
-.footer-content {
-  display: flex;
-  justify-content: space-between;
-  gap: 16px;
-
-  color: #9ca3af;
-  font-size: 0.9rem;
-}
 
 /* =================================================
    RESPONSIVE

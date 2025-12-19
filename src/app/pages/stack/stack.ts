@@ -1,10 +1,12 @@
+import { CommonModule } from '@angular/common';
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 @Component({
-  selector: 'app-stack',
-  imports: [],
-  template: `<p>stack works!</p>`,
-  styleUrl: './stack.css',
+  selector: 'stack',
+  standalone: true,
+  imports: [CommonModule],
+  templateUrl: './stack.html',
+  styleUrls: ['./stack.css'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class Stack { }

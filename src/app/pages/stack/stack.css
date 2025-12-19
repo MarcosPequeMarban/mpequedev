@@ -1,3 +1,190 @@
-:host {
-  display: block;
+/* =================================================
+   STACK SECTION – MATCH HOME & ABOUT
+   ================================================= */
+
+.stack-section {
+  position: relative;
+  min-height: calc(100vh - 76px);
+  padding: 140px 0 120px;
+
+  background-image: url('/branding/gifFondo.gif');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* =================================================
+   OVERLAY
+   ================================================= */
+
+.stack-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.stack-wrapper {
+  position: relative;
+  z-index: 2;
+}
+
+/* =================================================
+   HEADER
+   ================================================= */
+
+.stack-header {
+  max-width: 720px;
+  margin-bottom: 80px;
+
+  background: rgba(17, 24, 39, 0.9);
+  padding: 36px 44px;
+  border-radius: 28px;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6);
+}
+
+.stack-header h1 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 3rem;
+  color: #f9fafb;
+  margin-bottom: 12px;
+
+  text-shadow: 0 3px 8px rgba(0, 0, 0, 0.9), 0 0 18px rgba(34, 197, 94, 0.25);
+}
+
+.stack-subtitle {
+  font-size: 1.15rem;
+  color: #22c55e;
+
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.85);
+}
+
+/* =================================================
+   STACK CONTAINERS (CARDS GRANDES)
+   ================================================= */
+
+.stack-container {
+  background: rgba(17, 24, 39, 0.88);
+  border-radius: 36px;
+  padding: 56px;
+  margin-bottom: 64px;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  box-shadow: 0 36px 72px rgba(0, 0, 0, 0.65), inset 0 1px 0 rgba(255, 255, 255, 0.04);
+}
+
+/* Stack principal más protagonista */
+.stack-container.main-stack {
+  border: 1px solid rgba(34, 197, 94, 0.35);
+
+  box-shadow: 0 40px 90px rgba(0, 0, 0, 0.75), 0 0 24px rgba(34, 197, 94, 0.15);
+}
+
+/* Stack secundario más discreto */
+.stack-container.secondary {
+  background: rgba(15, 23, 42, 0.85);
+}
+
+/* =================================================
+   TITULOS DE BLOQUE
+   ================================================= */
+
+.stack-container h2 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 2rem;
+  color: #f9fafb;
+  margin-bottom: 36px;
+
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.8);
+}
+
+/* =================================================
+   GRID DE STACKS
+   ================================================= */
+
+.stack-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 28px;
+}
+
+.stack-grid.small {
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+}
+
+/* =================================================
+   STACK CARD
+   ================================================= */
+
+.stack-card {
+  background: rgba(15, 23, 42, 0.9);
+  padding: 28px 24px;
+  border-radius: 22px;
+
+  border: 1px solid rgba(255, 255, 255, 0.06);
+
+  box-shadow: 0 18px 36px rgba(0, 0, 0, 0.6);
+
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.stack-card h3 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.25rem;
+  color: #22c55e;
+  margin-bottom: 10px;
+}
+
+.stack-card p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #9ca3af;
+}
+
+/* Cards simples (texto solo) */
+.stack-grid.small .stack-card {
+  text-align: center;
+  font-size: 0.95rem;
+  color: #c7d2fe;
+}
+
+/* Hover elegante */
+.stack-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 28px 56px rgba(0, 0, 0, 0.75), 0 0 18px rgba(34, 197, 94, 0.2);
+}
+
+/* =================================================
+   RESPONSIVE
+   ================================================= */
+
+@media (max-width: 1024px) {
+  .stack-container {
+    padding: 40px;
+  }
+
+  .stack-header {
+    margin-bottom: 64px;
+  }
+}
+
+@media (max-width: 600px) {
+  .stack-section {
+    padding: 100px 0 80px;
+  }
+
+  .stack-header {
+    padding: 28px 24px;
+  }
+
+  .stack-header h1 {
+    font-size: 2.4rem;
+  }
+
+  .stack-container {
+    padding: 32px 24px;
+  }
 }
