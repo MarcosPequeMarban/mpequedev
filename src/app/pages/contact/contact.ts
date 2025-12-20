@@ -1,10 +1,11 @@
+import { CommonModule } from '@angular/common';
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 @Component({
-  selector: 'app-contact',
-  imports: [],
-  template: `<p>contact works!</p>`,
-  styleUrl: './contact.css',
+  selector: 'contact',
+  imports: [CommonModule],
+  templateUrl: './contact.html',
+  styleUrls: ['./contact.css'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class Contact { }
