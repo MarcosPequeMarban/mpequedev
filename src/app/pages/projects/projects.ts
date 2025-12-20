@@ -1,10 +1,14 @@
+import { CommonModule } from '@angular/common';
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 @Component({
-  selector: 'app-projects',
-  imports: [],
-  template: `<p>projects works!</p>`,
-  styleUrl: './projects.css',
+  selector: 'projects',
+  standalone: true,
+  imports: [CommonModule],
+  templateUrl: './projects.html',
+  styleUrls: ['./projects.css'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class Projects { }
+export class Projects {
+  showDocs= false;
+}

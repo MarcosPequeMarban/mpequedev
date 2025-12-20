@@ -1,0 +1,105 @@
+<section class="projects-section">
+  <div class="container">
+
+    <header class="projects-header">
+      <h1>Proyectos</h1>
+      <p>Una selección de proyectos personales y académicos desarrollados en entornos reales.</p>
+    </header>
+
+    <!-- PROYECTO PRINCIPAL -->
+    <div class="project-card featured">
+
+      <div class="project-inner">
+
+        <!-- COLUMNA IZQUIERDA -->
+        <div class="project-info">
+          <h2>Healthy Wallet</h2>
+          <span class="project-tag">
+            Aplicación Android · Proyecto final de grado
+          </span>
+
+          <p>
+            Aplicación móvil de gestión y educación financiera desarrollada en
+            Android, orientada a usuarios sin conocimientos financieros previos.
+          </p>
+
+          <ul class="project-features">
+            <li>Gestión de ingresos, gastos y presupuestos</li>
+            <li>Seguimiento de metas de ahorro</li>
+            <li>Balance mensual y estadísticas visuales</li>
+            <li>Módulo de educación financiera</li>
+            <li>Arquitectura MVVM y persistencia con Room</li>
+          </ul>
+
+          <div class="project-tech">
+            Java · Android · Room · MVVM · XML · Git
+          </div>
+
+          <div class="project-links">
+            <a href="https://github.com/MarcosPequeMarban/HealthyWallet.git" target="_blank" rel="noopener noreferrer">
+              Ver repositorio
+            </a>
+
+            <button (click)="showDocs = !showDocs">
+              Ver documentación
+            </button>
+          </div>
+
+          <div class="project-docs" *ngIf="showDocs">
+            <a href="branding/docs/Healthy_wallet_Presentación.pptx" target="_blank">
+              📊 Presentación HealthyWallet
+            </a>
+            <a href="branding/docs/TFG-MarcosPequeMarban.pdf" target="_blank">
+              📄 Documentación TFG
+            </a>
+          </div>
+        </div>
+
+        <div class="project-visual">
+          <img src="branding/logos/logo-healthyWallet.png" alt="Healthy Wallet logo" />
+        </div>
+
+      </div>
+    </div>
+
+
+    <!-- PROYECTO SECUNDARIO -->
+    <article class="project-card">
+      <div class="project-inner">
+
+        <!-- CONTENIDO IZQUIERDA -->
+        <div class="project-content">
+          <h2>Portfolio Web</h2>
+          <span class="project-tag">Frontend · Proyecto personal</span>
+
+          <p>
+            Web personal desarrollada para presentar mi perfil profesional,
+            experiencia y proyectos, cuidando diseño y usabilidad.
+          </p>
+
+          <div class="project-tech">
+            Angular · HTML · CSS · Responsive Design
+          </div>
+
+          <div class="project-links">
+            <a href="https://www.mpequedev.work" target="_blank" rel="noopener noreferrer" class="btn primary">
+              Ver Web
+            </a>
+
+            <a href="https://github.com/MarcosPequeMarban/mpequedev.git" target="_blank" rel="noopener noreferrer"
+              class="btn primary">
+              Ver repositorio
+            </a>
+          </div>
+        </div>
+
+        <!-- LOGO DERECHA -->
+        <div class="project-visual">
+          <img src="/branding/logo-mpmdev.png" alt="MPMDev logo" />
+        </div>
+
+      </div>
+    </article>
+
+  </div>
+</section>
