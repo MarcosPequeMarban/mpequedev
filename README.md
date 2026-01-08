@@ -1,59 +1,58 @@
-# Mpequedev
+# MPequeDev — Portfolio Profesional
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.0.3.
+Portfolio web personal desarrollado con **Angular**, enfocado en presentar de forma clara y profesional mi perfil como desarrollador, mi experiencia, stack tecnológico y proyectos reales.
 
-## Development server
+El objetivo principal de este proyecto es servir como **carta de presentación profesional**, cuidando tanto el diseño como la arquitectura y las buenas prácticas de desarrollo frontend.
 
-To start a local development server, run:
+🌐 **Web en producción:**  
+👉 https://www.mpequedev.work
 
+---
+
+## ✨ Características principales
+
+- ⚡ **Aplicación SPA** desarrollada con Angular
+- 🎨 Diseño moderno, oscuro y responsive
+- 🌍 **Soporte multiidioma** (Español, Inglés, Alemán y Francés)
+- 🧩 Arquitectura basada en **componentes standalone**
+- 📱 Totalmente adaptado a dispositivos móviles
+- 🧠 Contenido enfocado a recruiters y entornos profesionales
+- 🔗 Enlaces directos a GitHub, LinkedIn y contacto
+
+---
+
+## 🛠️ Tecnologías utilizadas
+
+- **Angular** (Standalone Components)
+- **TypeScript**
+- **HTML5**
+- **CSS3**
+- **ngx-translate** (internacionalización)
+- **Responsive Design**
+- **Git & GitHub**
+
+---
+
+## 📂 Secciones del portfolio
+
+- **Inicio** — Presentación y perfil profesional
+- **Sobre mí** — Background, enfoque y motivación
+- **Stack** — Tecnologías y herramientas principales
+- **Experiencia** — Experiencia profesional y formativa
+- **Proyectos** —  
+  - *Healthy Wallet* (App Android – TFG)  
+  - *Portfolio Web*  
+  - Proyecto corporativo (entorno real, no público)
+- **Contacto** — Enlaces directos a email, GitHub y LinkedIn
+
+---
+
+## 🚀 Desarrollo local
+
+### Requisitos
+- Node.js (versión recomendada LTS)
+- Angular CLI
+
+### Servidor de desarrollo
 ```bash
 ng serve
-```
-
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
